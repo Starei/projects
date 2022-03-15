@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.Table {
+  flex-basis: 100%;
+}
+
+.App-weather {
+    width: auto;
+    min-width: 28rem;
+    height: auto;
+    margin: auto auto;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    position: relative;
+}
