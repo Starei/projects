@@ -1,9 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 
-
 # Create your models here.
-
 
 class User(AbstractBaseUser):
     login = models.CharField(max_length=120, unique=True)
@@ -45,3 +43,8 @@ class UserMessage(models.Model):
     message = models.CharField(max_length=120)
     date = models.CharField(max_length=120)
     title = models.CharField(max_length=120)
+
+
+class UserFollowers(models.Model):
+    author = models.CharField(max_length=120)
+    follower = models.CharField(max_length=120)

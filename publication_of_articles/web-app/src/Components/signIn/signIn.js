@@ -13,9 +13,12 @@ const SignIn = (props) => {
         let usernameLogin = event.target.elements.login.value
         let usernamePassword = event.target.elements.password.value
         Axios
-            .get(`http://localhost:8000/api/users/?login=${usernameLogin}&password=${usernamePassword}`)
+            .get(`http://localhost:8000/api/users/`)
             .then((response) => {
-                if (response.data.length !== 0) {
+                let answer = response.data.filter(user => {return user.login === usernameLogin && 
+                    user.password === usernamePassword}).map(user => {return user})
+                console.log(answer)
+                if (answer.length !== 0) {
                     Axios
                         .get(`http://localhost:8000/api/userban/`)
                         .then((response) => {

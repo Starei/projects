@@ -54,18 +54,28 @@ const App = (props) => {
               <List
                   list="all"
                   login={props.login}
+                  authorized={props.authorized}
                 />}
               />
             <Route exact path='/mylist' component={() =>
               <List 
                   list="my"
                   login={props.login}
+                  authorized={props.authorized}
                 />}
               />
             <Route exact path='/checklist' component={() =>
               <List
                   list="checklist"
                   login={props.login}
+                  authorized={props.authorized}
+                />}
+              />
+            <Route exact path='/recomlist' component={() =>
+              <List
+                  list="recomlist"
+                  login={props.login}
+                  authorized={props.authorized}
                 />}
               />
             <Route exact path='/message' component={() =>
@@ -73,6 +83,7 @@ const App = (props) => {
                   login={props.login}
               />}
               />
+            <Route exact path='/searchlist' component={List}/>
             <Route exact path='/users' component={Users}/>
             <Route exact path='/unload' component={Unloading}/>
             <Route exact path="/list/:articleID/" component={Detail}/>

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Article, UserBan, Check_Article, UserMessage
+from .models import User, Article, UserBan, Check_Article, UserMessage, UserFollowers
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -31,3 +31,8 @@ class UserMessageSerializer(serializers.ModelSerializer):
         model = UserMessage
         fields = ['id', 'login', 'message', 'date', 'title']
 
+
+class UserFollowersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserFollowers
+        fields = ['id', 'author', 'follower']

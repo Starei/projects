@@ -12,12 +12,9 @@ const FAQ = (props) => {
                 <h1 className="title">FAQ</h1>
                 { type === 'FAQ' ?
                     <div className="text">
-                        The visitor can only view articles. 
-                        To be able to create articles yourself and work with them, 
-                        you need to register and log into your account. 
-                        After the above steps are completed, 
-                        the user will also be able to view his own articles. 
-                        Editing of articles is carried out only by the author himself.
+                        Посетитель может просматривать и искать статьи. Чтобы иметь возможность 
+                        самостоятельно создавать статьи и работать с ними, вам необходимо 
+                        зарегистрироваться и войти в свою учетную запись.
                     </div>
                     :
                     <div className="text">

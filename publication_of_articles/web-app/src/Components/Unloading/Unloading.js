@@ -21,7 +21,6 @@ class Unloading extends React.Component {
         }
       }).then(res => {
         console.log(res.status);
-        //console.log(res.data.Flag); 
         if(res.status === 200)
         {
           this.setState({flag: true, articles: res.data})

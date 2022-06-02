@@ -11,27 +11,20 @@ from rest_framework.generics import (
     UpdateAPIView,
     RetrieveAPIView
 )
+
 from .models import (
-    User, Article, 
-    UserFile, Check_Article, 
-    UserBan, UserMessage
-)
+    User, Article, UserFile, 
+    Check_Article, UserBan, UserMessage,
+    UserFollowers)
 from .serializers import (
-    UserSerializer, 
-    ArticleSerializer, 
-    Check_ArticleSerializer, 
-    UserBanSerializer, 
-    UserMessageSerializer
-)
+    UserSerializer, ArticleSerializer, 
+    Check_ArticleSerializer, UserBanSerializer, 
+    UserMessageSerializer, UserFollowersSerializer)
 from django.http import HttpResponse, response
 from .resources import PersonResource
-import json
-import sqlite3
-import os
-
-
+import json, sqlite3, os
+ 
 # Create your views here.
-
 
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
@@ -51,6 +44,11 @@ class UserBanViewSet(viewsets.ModelViewSet):
 class UserMessageViewSet(viewsets.ModelViewSet):
     serializer_class = UserMessageSerializer
     queryset = UserMessage.objects.all()
+
+
+class UserFollowersViewSet(viewsets.ModelViewSet):
+    serializer_class = UserFollowersSerializer
+    queryset = UserFollowers.objects.all()
 
 
 class ArticleListView(ListAPIView):
@@ -94,8 +92,8 @@ def export(request):
         with open(File_name, "w") as file:
             file.write(dataset.json)
 
-        UserFile.objects.create(login=login, file_name=File_name) # Чтобы знать какой файл открывать
-        Article.objects.filter(login=login).delete() # Удаляем записи
+        UserFile.objects.create(login=login, file_name=File_name) 
+        Article.objects.filter(login=login).delete() 
         return response
     
 

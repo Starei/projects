@@ -94,7 +94,7 @@ class CustomForm extends React.Component {
       const Avatar = document.getElementById('avatar').value
 
       axios.put(`http://localhost:8000/api/list/${ArticleID}/update/`, {
-        login: Login, //ЗАКОНЧИЛ ЗДЕСЬ
+        login: Login, 
         title: Title,
         content: Content,
         image: Image,
@@ -122,7 +122,6 @@ class CustomForm extends React.Component {
       return <Redirect to='/list'/>
     }
     const data = this.props.data
-    //console.log(data)
     if (data) {
       contentInput['title'] = data.title
       contentInput['content'] = data.content

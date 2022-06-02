@@ -6,6 +6,7 @@ const initialState = {
   }
 
 export const rootReducer = (state = initialState, action) => {
+    // console.log(state, action.type)
     switch (action.type) {
         case ACTION_SET_AUTH_LOGIN:
             return { 

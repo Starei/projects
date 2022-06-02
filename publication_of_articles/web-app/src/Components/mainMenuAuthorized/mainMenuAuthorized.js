@@ -42,6 +42,11 @@ const mainMenuAuthorized = (props) => {
                         <span>Экспорт/Импорт</span>
                     </div>
                 </Link>
+                <Link to='/recomlist' className='react-link'>
+                    <div className='faq menu-item'>
+                        <span>Рекомендуемое</span>
+                    </div>
+                </Link>
                 { props.login.slice(0, 5) === "admin" &&
                     <Link to='/users' className='react-link'>
                         <div className='faq menu-item'>

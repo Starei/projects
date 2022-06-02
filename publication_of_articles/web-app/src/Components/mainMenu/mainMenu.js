@@ -7,7 +7,7 @@ const MainMenu = () => (
         <div className='main-menu-wrapper'>
             <Link to='/list' className='react-link'>
                 <div className='faq menu-item'>
-                    <span>Articles</span>
+                    <span>Статьи</span>
                 </div>
             </Link>
             <Link to={{

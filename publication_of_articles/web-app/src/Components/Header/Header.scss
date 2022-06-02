@@ -25,6 +25,18 @@ header {
                     color: #fff;
                 }
             }
+            .form {
+                white-space: nowrap;
+                margin-left: 2rem;
+                .input {
+                    margin-right: 1rem;
+                    color: #000;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+                .button {
+                    color: white;
+                }
+            }
             .info {
                 margin-left: 3rem;
                 color: #000;

@@ -2,10 +2,8 @@ import React from "react";
 import axios from "axios";
 import { Redirect } from 'react-router';
 import { Button, Card } from "antd";
-import { LeftCircleTwoTone } from '@ant-design/icons';
 import CustomForm from "./Form";
 import './Detail.scss';
-import { Link } from "react-router-dom";
 
 
 class ArticleDetail extends React.Component {
@@ -101,12 +99,8 @@ class ArticleDetail extends React.Component {
     if (redirect) {
       return <Redirect to='/list'/>
     }
-    console.log(this.props.location.list)
     return (
       <div>
-      <div className="care">
-        <Link to="/list" ><LeftCircleTwoTone/></Link>
-      </div>
       <div className="Detail">
           <Card title={this.state.article.title}>
             <p> {this.state.article.content} </p>

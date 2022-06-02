@@ -8,18 +8,17 @@ export default class Users extends Component {
         this.state = {
             users: [],
             usersban: [],
+            dictUsersban: {}
         }
     }
 
     componentDidMount() {
         this.getUsers();
         this.getUsersBan();
-        this.checkUserBan();
       }      
     getUsers() {
     axios.get("http://localhost:8000/api/users/").then((response) => {
         if (response.status === 200) {
-        console.log("users: ", response.data);
         this.setState({
             users: response.data ? response.data : [],
         });
@@ -31,9 +30,11 @@ export default class Users extends Component {
       axios.get("http://localhost:8000/api/userban/")
       .then((response) => {
         if (response.status === 200) {
+          console.log("usersban: ", response.data);
           this.setState({
               usersban: response.data ? response.data : [],
           });
+          this.checkUserBan(response.data)
         }
       })
       .catch((error) => {
@@ -69,47 +70,47 @@ export default class Users extends Component {
       }
     }
 
-    checkUserBan() {
+    checkUserBan(usersban) {
       let dateValue = {};
+      let usersLogin = {} 
       let dateNow = new Date();
       let dateBan, year, month, day;
-      this.state.usersban.map((user) => dateValue[user.id] = user.date.split('-'));
-      for (let key in dateValue) {
-        year = Number(dateValue[key][0])
-        month = Number(dateValue[key][1])
-        day = Number(dateValue[key][2])
+      usersban.map((user) => {dateValue[user.id] = user.date.split('-')});
+      usersban.map((user) => {usersLogin[user.id] = user.login});
+      for (let id in dateValue) {
+        year = Number(dateValue[id][0])
+        month = Number(dateValue[id][1])
+        day = Number(dateValue[id][2])
         dateBan = new Date(year, month, day)
         if (dateNow > dateBan) {
-          this.razbanUser(key)
+          console.log("check", id)
+          this.razbanUser(id, usersLogin[id])
         }
       }
     }
 
-    razbanUser = (Login) => {
-      let id = 0;
-      let usersban = this.state.usersban;
-      usersban.map((user) => {
-        if (user.login === Login)
-        {
-          id = user.id;
-        }
-        return user;
-      })
+    razbanUser = (id, login) => {
+      console.log("razban:", id)
       axios
         .delete(`http://localhost:8000/api/userban/${id}/`)
         .then((response) => {
           alert("Пользователь разбанен");
+          delete this.state.dictUsersban[login]
           this.getUsersBan();
         })
     }
     
-    deletUser = (id) => {
+    deletUser = (id, login) => {
       axios
         .delete(`http://localhost:8000/api/users/${id}/`)
         .then((response) => {
           this.getUsers();
-          this.razbanUser(id);
-          this.getUsersBan();
+          if (Object.values(this.state.dictUsersban).includes(this.state.dictUsersban[login])) {
+            this.razbanUser(this.state.dictUsersban[login], login);
+          }
+          else {
+            this.getUsersBan();
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -121,7 +122,8 @@ export default class Users extends Component {
     const { noDataFound, users} = this.state;
       let usersDetails = [];
       let dict = {};
-      let usersBan = this.state.usersban.map((userban) => userban.login);
+      let usersBan = this.state.dictUsersban
+      this.state.usersban.map((userban) => usersBan[userban.login] = userban.id);
       this.state.usersban.map((userban) => dict[userban.login] = userban.date);
       let inc = 1;
       if (users.length) {
@@ -131,11 +133,11 @@ export default class Users extends Component {
               <td>{inc++}</td>
               <td>{user.login}</td>
               <td>
-                  {usersBan.includes(user.login) ?
+                  {Object.keys(usersBan).includes(user.login) ?
                     <Button
                       color="primary"
                       size="sm"
-                      onClick={() => this.razbanUser(user.login)}
+                      onClick={() => this.razbanUser(usersBan[user.login], user.login)}
                     >
                       Разбан  
                     </Button>
@@ -150,7 +152,7 @@ export default class Users extends Component {
                   }
               </td>
               <td>
-                  { usersBan.includes(user.login) ?
+                  {Object.keys(usersBan).includes(user.login) ?
                     <span>
                      Бан до {dict[user.login]}
                     </span>
@@ -164,7 +166,7 @@ export default class Users extends Component {
                 <Button
                   color="danger"
                   size="sm"
-                  onClick={() => this.deletUser(user.id)}
+                  onClick={() => this.deletUser(user.id, user.login)}
                 >
                   Удалить
                 </Button>

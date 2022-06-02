@@ -1,19 +1,33 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 
-function Header(props) {
-    const [,setTime] = useState(Date.now());
-    var currentDate = new Date();
-    useEffect(() => {
-      const interval = setInterval(() => setTime(Date.now()), 5000);
+class Header extends React.Component {
 
-      return () => {
-        clearInterval(interval);
-      };
-    }, []);
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentDate: new Date(),
+            text: "", 
+            setTime: Date.now()
+        }
+      }
 
+    componentDidMount() {
+        const interval = setInterval(() => this.state.setTime, 5000);
+        return () => {
+            clearInterval(interval);
+        };
+    }
+
+    updateInput = (evt) => {
+        this.setState({
+            text: evt.target.value
+        })
+    }
+
+    render() {
     return (
         <header>
             <div className='header-wrapper'>
@@ -21,7 +35,7 @@ function Header(props) {
                         <Link to='/' className='react-link'>
                             <p>Меню</p>
                         </Link>
-                        {props.authorized &&
+                        {this.props.authorized &&
                         <div className='logo'>
                             <Link to='/message' className='react-link'>
                                 <p>Сообщения</p>
@@ -32,27 +46,48 @@ function Header(props) {
                             <Link className='react-link' to={{
                                     pathname: '/unload',
                                     type: 'unload',
-                                    login: props.login
+                                    login: this.props.login
                                 }}>
                                 <p>Выгрузить</p>
                             </Link>
                             <Link className='react-link' to={{
                                     pathname: '/unload',
                                     type: 'load',
-                                    login: props.login
+                                    login: this.props.login
                                 }}>
                                 <p>Загрузить</p>
                             </Link>
                         </div>
                         }
+                        <span className='form'>
+                            <input 
+                                className='input' 
+                                name='text' 
+                                placeholder='Найти статью'
+                                value={this.state.text}
+                                onChange={evt => this.updateInput(evt)}
+                                />
+                            
+                            <Link 
+                                className='button' 
+                                to={{
+                                    pathname:`/searchlist`,
+                                    text: this.state.text,
+                                    list: "searchlist",
+                                    login: this.props.login
+                                }}>
+                                Поиск
+                            </Link>
+                        </span>   
                     </div>
                 <div className='info'>
-                    <p className='login'>{props.authorized ? props.login : 'Guest'}</p>
-                    <p className='time'>{('0' + currentDate.getHours()).substr(-2) + ':' + ('0' + currentDate.getMinutes()).substr(-2)}</p>
+                    <p className='login'>{this.props.authorized ? this.props.login : 'Guest'}</p>
+                    <p className='time'>{('0' + this.state.currentDate.getHours()).substr(-2) + ':' + ('0' + this.state.currentDate.getMinutes()).substr(-2)}</p>
                 </div>
             </div>
         </header>
     );
+    }
 }
 
 

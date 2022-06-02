@@ -7,6 +7,7 @@ from .views import (
     Check_ArticleViewSet,
     UserBanViewSet,
     UserMessageViewSet,
+    UserFollowersViewSet,
     ArticleListView,
     ArticleCreateView,
     ArticleDetailView,
@@ -20,6 +21,7 @@ router.register(r'users', UserViewSet)
 router.register(r'checklist', Check_ArticleViewSet)
 router.register(r'userban', UserBanViewSet)
 router.register(r'message', UserMessageViewSet)
+router.register(r'follow', UserFollowersViewSet), 
 
 urlpatterns = [
     path('list/', ArticleListView.as_view()),
