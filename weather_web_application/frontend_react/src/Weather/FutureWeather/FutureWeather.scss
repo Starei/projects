@@ -1,0 +1,73 @@
+.weather-future {
+  margin-top: 1rem;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: gray;
+  display: table; 
+
+  &-tile {
+    display: table-cell;
+    width: 14%;
+    padding: 3px;
+    border-right: solid 1px gray;
+    background-clip: padding-box;
+
+    &-date {
+      text-align: center;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+
+      &-maxtemp {
+        font-size: 20px;
+      }  
+
+      &-icon-rain {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(
+          ./../../Assets/Images/rain.png
+        );
+      }
+
+      &-icon-sunny {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(
+          ../../Assets/Images/sunny.png
+        );
+      }
+
+      &-icon-snow {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(
+          ../../Assets/Images/snow.png
+        );
+      }
+
+      &-icon-snowing {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(
+          ../../Assets/Images/snowrain.png
+        );
+      }
+    }
+  }
+}

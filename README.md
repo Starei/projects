@@ -1,6 +1,6 @@
 # Description
 
-**`Weather web application`** (PHP Laravel & React JS)
+**`Weather web application`** (Python Django & React JS with Machine Learning)
 
 **`Publication of articles`** (Python Django & React JS)
 

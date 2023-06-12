@@ -1,0 +1,80 @@
+.input_container{
+  width: auto;
+  min-width: 15rem;
+  height: auto;
+  margin: auto auto;
+  padding: 1rem 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  position: relative;
+
+  .input_form {
+    display: block;
+    align-items: center;
+
+    .coord_form {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .coord_container {
+        display: inline-block;
+
+        .coordinate {
+          display: block;
+          margin-bottom: 2px;
+        }
+
+        input {
+          margin: 0px 2px;
+        }
+      }
+
+      .button-coords {
+        display: inline-block;
+        background: transparent url(~/src/Assets/Images/search.jpg) no-repeat;
+        background-size: cover;
+        border-radius: 3px;
+        border: 0px;
+        cursor: pointer;
+        height: 4rem;
+        width: 4rem;
+        overflow: visible;
+      }
+    }
+
+    .city_form {
+      margin-top: 1rem;
+    
+      button {
+        background: #0071e3;
+        border: none;
+        color: #fff;
+        outline: none;
+        padding: 4px 11px;
+        border-radius: 3px;
+        margin-left: 3px;
+        cursor: pointer; 
+      }
+
+      button:hover {
+        background: hsl(210, 95%, 54%);;
+      }
+
+      .clear_button {
+        display: inline-block;
+        background: transparent url(~/src/Assets/Images/cross.png) no-repeat;
+        background-size: cover;
+        border-radius: 3px;
+        margin-right: 5px;
+        border: 0px;
+        cursor: pointer;
+        height: 1rem;
+        width: 1rem;
+        overflow: visible;
+      }
+
+    }
+  }
+}
