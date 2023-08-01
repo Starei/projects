@@ -1,156 +1,161 @@
-from rest_framework import viewsets, status
-from .models import *
-from .serializers import *
-from django.http import HttpRequest, JsonResponse
-
 import io
-from time import time
 from datetime import timedelta
+from time import time
+
 import pandas as pd
+from django.http import HttpRequest, JsonResponse
 from haversine import haversine
+from rest_framework import status, viewsets
 
-from .ml_part.data_workflow import DataCollection, DataCleaning, LatestData
-from .ml_part.temp import sarima_and_es
+from .config.config import logger
+from .ml_part.data_workflow import ERA5Service, NOAACleaning, NOAAService
 from .ml_part.precip import lstm
+from .ml_part.temp import sarima_and_es
+from .models import City, Station
+from .serializers import CitySerializer
 
 
-class CityViewSet(viewsets.ModelViewSet):
-    serializer_class = CitySerializer
-    queryset = City.objects.all()
-
-
-class CurrentWeatherViewSet(viewsets.ModelViewSet):
-    serializer_class = CurrentWeatherSerializer
-    queryset = CurrentWeather.objects.all()
-
-
-def get_weekly_forecast(request: HttpRequest):
+def get_weekly_forecast(request: HttpRequest) -> JsonResponse:
     params = request.GET
-    lat, lng = float(params.get('lat')), float(params.get('lng'))
-    start_date = '2015-01-01'
+    lat, lng = float(params.get("lat")), float(params.get("lng"))
+    start_date = "2015-01-01"
 
-    print('='*10 + ' DATA COLLECTION ' + '='*10)
+    logger.info("=" * 10 + " DATA COLLECTION " + "=" * 10)
     # Not specify start date here because there may not be the data after this
     # date and we will get an empty dataset
-    city_station_dataset = pd.read_csv(io.StringIO(DataCollection(
-        (lat, lng), data_types='TMAX,TMIN', num_stations=10
-    )._dataset)) 
+    noaa_initial_df = NOAAService(
+        (lat, lng),
+        data_types=["TMAX", "TMIN"],
+        start_date=start_date,
+        num_nearby_stations=10,
+    ).get_noaa_data()
 
-    print('\n' + '='*10 + ' DATA CLEANING ' + '='*10)
-    city_cleaned_df = DataCleaning(
-        city_station_dataset, start_date=start_date, cols=['TMAX', 'TMIN']
-    ).get_cleaned_data().iloc[:-1] # without today's day
+    logger.info("\n" + "=" * 10 + " DATA CLEANING " + "=" * 10)
+    # Since we make prediction also for today,
+    # we take the data without today's day
+    noaa_cleaned_df = NOAACleaning(noaa_initial_df).get_cleaned_data().iloc[:-1]
 
-    print('\n\n' +'='*10 + ' TEMPERATURE PREDICTION ' + '='*10)
+    logger.info("\n\n" + "=" * 10 + " TEMPERATURE PREDICTION " + "=" * 10)
     start_time = time()
-    temp_max_fc = sarima_and_es(city_cleaned_df['temp_max'])
-    temp_min_fc = sarima_and_es(city_cleaned_df['temp_min'])
+    temp_max_fc = sarima_and_es(noaa_cleaned_df["temp_max"])
+    temp_min_fc = sarima_and_es(noaa_cleaned_df["temp_min"])
     end_time = time()
-    print(f"Total time: {end_time - start_time}")
+    logger.info(f"Total time: {end_time - start_time}")
 
-    print('='*10 + ' DATA COLLECTION ' + '='*10)
+    logger.info("=" * 10 + " DATA COLLECTION " + "=" * 10)
     stations = pd.DataFrame(
-        Station.objects.values(), 
-        columns=[field.name for field in Station._meta.get_fields()]
+        Station.objects.values(),
+        columns=[field.name for field in Station._meta.get_fields()],
     )
-    stations['coords'] = tuple(zip(stations['lat'], stations['lng']))
-    stations['dist'] = stations['coords'].map(
+    stations["coords"] = tuple(zip(stations["lat"], stations["lng"]))
+    stations["dist"] = stations["coords"].map(
         lambda x: haversine([lat, lng], x)
     )
-    nearest_station = stations.loc[stations['dist'].idxmin()]
-    data_types = [
-        'temperature_2m_max', 'temperature_2m_min', 'precipitation_sum',
-        'windspeed_10m_max', 'windgusts_10m_max', 'winddirection_10m_dominant',
-        'pressure_msl', 'relativehumidity_2m'
+    nearest_station = stations.loc[stations["dist"].idxmin()]
+    era_data_types = [
+        "temperature_2m_max",
+        "temperature_2m_min",
+        "precipitation_sum",
+        "windspeed_10m",
+        "winddirection_10m_dominant",
+        "pressure_msl",
+        "relativehumidity_2m",
     ]
-    combined_dataset = LatestData(
-        nearest_station['coords'], data_types
-    ).combined_dataset.iloc[:-1]
+    era_df = (
+        ERA5Service(
+            nearest_station["coords"],
+            data_types=era_data_types,
+            start_date=start_date,
+        )
+        .get_era_data()
+        .iloc[:-1]
+    )
 
-    print('\n' + '='*10 + ' PRECIPITATION ' + '='*10)
+    logger.info("\n" + "=" * 10 + " PRECIPITATION " + "=" * 10)
     start_time = time()
-    precip_fc = lstm(combined_dataset)
+    precip_fc = lstm(era_df)
     end_time = time()
-    print(f"Total time: {end_time - start_time}")
+    logger.info(f"Total time: {end_time - start_time}")
 
     forecast = {
-        'max_temperature': temp_max_fc,
-        'min_temperature': temp_min_fc,
-        'calendar_date': pd.date_range(
-            start=city_cleaned_df.index[-1] + timedelta(days=1),
-            end=city_cleaned_df.index[-1] + timedelta(days=7),
-            freq='D'
-        ).strftime('%a %d').to_list(),
-        'precipitation': precip_fc
+        "max_temperature": temp_max_fc,
+        "min_temperature": temp_min_fc,
+        "calendar_date": pd.date_range(
+            start=noaa_cleaned_df.index[-1] + timedelta(days=1),
+            end=noaa_cleaned_df.index[-1] + timedelta(days=7),
+            freq="D",
+        )
+        .strftime("%a %d")
+        .to_list(),
+        "precipitation": precip_fc,
     }
     return JsonResponse(forecast)
 
 
-def check_city(request: HttpRequest):
+def check_city(request: HttpRequest) -> JsonResponse:
     params = request.GET
-    data = {'status': 0, 'message': ''}
+    data = {"status": 0, "message": ""}
 
-    city = params.get('city', None)
+    city = params.get("city", None)
     if city is not None:
         flag = False
-        if ',' in city:
-            city, country = [s.strip() for s in city.split(',')]  
+        if "," in city:
+            city, country = [s.strip() for s in city.split(",")]
             found_cities = City.objects.filter(
                 name__iexact=city, country__iexact=country
             )
-            if len(found_cities): flag = True
+            if len(found_cities):
+                flag = True
 
         if not flag:
             found_cities = City.objects.filter(name__iexact=city)
 
-        found_cities = list(found_cities.values())     
+        found_cities = list(found_cities.values())
         if len(found_cities) == 0:
-            data['status'] = status.HTTP_404_NOT_FOUND.numerator,
-            data['message'] = (
-                f"Город '{city}' не найден. " + 
-                "Возможно, такого города нет в базе."
+            data["status"] = status.HTTP_404_NOT_FOUND.numerator
+            data["message"] = (
+                f"{city} city was not found. "
+                + "Perhaps there is no such city in the database."
             )
         elif len(found_cities) > 1:
-            data['status'] = status.HTTP_202_ACCEPTED.numerator
-            data['message'] = (
-                f"Выберите номер локации города '{city}' из предложенных:" 
-            )
-            data['cityData'] = found_cities
+            data["status"] = status.HTTP_202_ACCEPTED.numerator
+            data[
+                "message"
+            ] = f"Choose the point number for {city} from the proposed list:"
+            data["cityData"] = found_cities
         else:
-            data['status'] = status.HTTP_200_OK.numerator
-            data['cityData'] = found_cities[0]
+            data["status"] = status.HTTP_200_OK.numerator
+            data["cityData"] = found_cities[0]
 
     else:
-        lat, lng = float(params.get('lat')), float(params.get('lng')) 
+        lat, lng = float(params.get("lat")), float(params.get("lng"))
         cities = pd.DataFrame(
-            City.objects.values(), 
-            columns=[field.name for field in City._meta.get_fields()]
+            City.objects.values(),
+            columns=[field.name for field in City._meta.get_fields()],
         )
-        cities['coords'] = tuple(zip(cities['lat'], cities['lng']))
-        cities['dist'] = cities['coords'].map(
+        cities["coords"] = tuple(zip(cities["lat"], cities["lng"]))
+        cities["dist"] = cities["coords"].map(
             lambda x: haversine([lat, lng], x)
         )
-        nearest_city = cities.loc[cities['dist'].idxmin()]
-        
-        data['status'] = status.HTTP_200_OK.numerator
+        nearest_city = cities.loc[cities["dist"].idxmin()]
+
+        data["status"] = status.HTTP_200_OK.numerator
         city_data = {
-            'name': nearest_city['name'], 
-            'country': nearest_city['country'],
-            'distance': nearest_city['dist']
+            "name": nearest_city["name"],
+            "country": nearest_city["country"],
+            "distance": nearest_city["dist"],
         }
-        if nearest_city['dist'] < 10:
-            data['message'] = (
-                "Город по координатам: '{name}' из {county}"
+        if nearest_city["dist"] < 10:
+            data["message"] = (
+                "The city by coordinates: '{name}' in {county}"
             ).format_map(city_data)
         else:
-            data['message'] = (
-                "Ближайший город {name} из {country} располагается в " +
-                "{distance:.1f}км от заданных координат. Продолжить?"
+            data["message"] = (
+                "The nearest {name} city in {country} is located "
+                + "{distance:.1f}км from the specified coordinates. Continue?"
             ).format_map(city_data)
-        data['cityData'] = CitySerializer(
-            City.objects.get(id=cities['dist'].idxmin())
+        data["cityData"] = CitySerializer(
+            City.objects.get(id=cities["dist"].idxmin())
         ).data
 
     return JsonResponse(data, status=status.HTTP_200_OK)
-
-

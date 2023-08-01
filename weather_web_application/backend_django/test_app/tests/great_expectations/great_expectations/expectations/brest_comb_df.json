@@ -1,0 +1,45 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "brest_comb_df",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_column_count_to_be_between",
+      "kwargs": {
+        "max_value": 100,
+        "min_value": 4
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_increasing",
+      "kwargs": {
+        "column": "date",
+        "parse_strings_as_datetimes": true
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "date"
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_request": {
+          "data_asset_name": "brest_comb_df.csv",
+          "data_connector_name": "default_inferred_data_connector_name",
+          "datasource_name": "my_datasource",
+          "limit": 1000
+        },
+        "citation_date": "2023-07-14T09:42:26.696996Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.17.4"
+  }
+}

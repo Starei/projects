@@ -1,0 +1,10 @@
+[flake8]
+ignore = E203, E266, E501, W503, F403, F401
+max-complexity = 20
+select = B,C,E,F,W,T4,B9
+exclude = .git, __pycache__, .ipynb_checkpoints, .vscode
+
+# E203: Whitespace before ':'
+# E266: too many leading ‘#’ for block comment
+# E501: Line too long
+# W503: Line break occurred before binary operator

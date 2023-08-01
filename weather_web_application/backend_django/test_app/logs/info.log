@@ -1,0 +1,507 @@
+INFO 2023-07-20 14:35:23,213 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py changed, reloading.
+
+INFO 2023-07-20 14:55:35,428 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 15:13:27,816 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 15:29:34,151 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 15:33:35,705 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 15:34:51,412 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 15:37:19,783 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 15:40:26,158 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 16:07:27,809 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 17:08:07,740 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 17:10:37,314 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 17:12:15,931 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 17:15:38,339 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 17:22:16,933 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 17:30:06,883 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 19:39:57,188 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 19:41:15,219 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 19:59:12,753 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:02:30,737 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:03:51,488 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:04:15,852 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:07:31,253 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:10:26,916 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:11:44,836 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:14:05,899 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:16:49,878 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:31:36,674 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:33:20,482 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:34:06,952 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:37:01,159 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:38:14,252 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:42:06,975 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:46:05,428 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:48:43,653 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-20 20:49:03,513 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 12:19:59,443 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 12:47:02,211 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:07:32,675 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:08:26,401 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:15:30,080 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:21:42,709 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:26:11,911 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:36:20,435 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:37:15,071 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:38:44,881 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:53:47,424 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 13:55:09,126 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 14:10:37,406 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 14:12:56,292 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 21:32:59,188 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 21:34:27,462 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 21:35:43,815 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 21:36:16,740 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 21:40:17,992 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 21:42:56,760 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+INFO 2023-07-21 21:51:27,388 [django.utils.autoreload:autoreload.py:                trigger_reload:266]
+D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py changed, reloading.
+
+ERROR 2023-08-01 09:46:43,299 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 137, in check_city
+    nearest_city = cities.loc[cities["dist"].idxmin()]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\series.py", line 2495, in idxmin
+    i = self.argmin(axis, skipna, *args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\base.py", line 717, in argmin
+    return nanops.nanargmin(  # type: ignore[return-value]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 88, in _f
+    raise TypeError(
+TypeError: reduction operation 'argmin' not allowed for this dtype
+INFO 2023-08-01 09:46:43,479 [root:views.py:                get_weekly_forecast:24]
+========== DATA COLLECTION ==========
+
+ERROR 2023-08-01 09:46:43,484 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/forecast
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 27, in get_weekly_forecast
+    noaa_initial_df = NOAAService(
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py", line 195, in __init__
+    super(NOAAService, self).__init__(
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py", line 32, in __init__
+    self.check_types(loc_coords, data_types, start_date, end_date)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\ml_part\data_workflow.py", line 67, in check_types
+    raise TypeError(
+TypeError: 'data_types' type must be list, tuple, or set but got type str.
+ERROR 2023-08-01 09:54:16,958 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 137, in check_city
+    nearest_city = cities.loc[cities["dist"].idxmin()]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\series.py", line 2495, in idxmin
+    i = self.argmin(axis, skipna, *args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\base.py", line 717, in argmin
+    return nanops.nanargmin(  # type: ignore[return-value]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 88, in _f
+    raise TypeError(
+TypeError: reduction operation 'argmin' not allowed for this dtype
+INFO 2023-08-01 09:54:17,027 [root:views.py:                get_weekly_forecast:24]
+========== DATA COLLECTION ==========
+
+INFO 2023-08-01 09:54:27,291 [root:views.py:                get_weekly_forecast:34]
+
+========== DATA CLEANING ==========
+
+INFO 2023-08-01 09:54:28,419 [root:views.py:                get_weekly_forecast:39]
+
+
+========== TEMPERATURE PREDICTION ==========
+
+INFO 2023-08-01 09:55:42,919 [root:views.py:                get_weekly_forecast:44]
+Total time: 74.50053453445435
+
+INFO 2023-08-01 09:55:42,919 [root:views.py:                get_weekly_forecast:46]
+========== DATA COLLECTION ==========
+
+ERROR 2023-08-01 09:55:42,940 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/forecast
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 55, in get_weekly_forecast
+    nearest_station = stations.loc[stations["dist"].idxmin()]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\series.py", line 2495, in idxmin
+    i = self.argmin(axis, skipna, *args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\base.py", line 717, in argmin
+    return nanops.nanargmin(  # type: ignore[return-value]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 88, in _f
+    raise TypeError(
+TypeError: reduction operation 'argmin' not allowed for this dtype
+ERROR 2023-08-01 10:07:21,172 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 137, in check_city
+    nearest_city = cities.loc[pd.to_numeric(cities["dist"]).idxmin()]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\series.py", line 2495, in idxmin
+    i = self.argmin(axis, skipna, *args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\base.py", line 717, in argmin
+    return nanops.nanargmin(  # type: ignore[return-value]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 93, in _f
+    return f(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 1150, in nanargmin
+    result = values.argmin(axis)  # type: ignore[var-annotated]
+ValueError: attempt to get argmin of an empty sequence
+INFO 2023-08-01 10:07:21,244 [root:views.py:                get_weekly_forecast:24]
+========== DATA COLLECTION ==========
+
+INFO 2023-08-01 10:07:31,392 [root:views.py:                get_weekly_forecast:34]
+
+========== DATA CLEANING ==========
+
+INFO 2023-08-01 10:07:32,422 [root:views.py:                get_weekly_forecast:39]
+
+
+========== TEMPERATURE PREDICTION ==========
+
+INFO 2023-08-01 10:08:46,982 [root:views.py:                get_weekly_forecast:44]
+Total time: 74.55901575088501
+
+INFO 2023-08-01 10:08:46,983 [root:views.py:                get_weekly_forecast:46]
+========== DATA COLLECTION ==========
+
+ERROR 2023-08-01 10:08:46,995 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/forecast
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 55, in get_weekly_forecast
+    nearest_station = stations.loc[pd.to_numeric(stations["dist"]).idxmin()]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\series.py", line 2495, in idxmin
+    i = self.argmin(axis, skipna, *args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\base.py", line 717, in argmin
+    return nanops.nanargmin(  # type: ignore[return-value]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 93, in _f
+    return f(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 1150, in nanargmin
+    result = values.argmin(axis)  # type: ignore[var-annotated]
+ValueError: attempt to get argmin of an empty sequence
+ERROR 2023-08-01 10:32:09,107 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 137, in check_city
+    nearest_city = cities.loc[cities["dist"].idxmin()]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\series.py", line 2495, in idxmin
+    i = self.argmin(axis, skipna, *args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\base.py", line 717, in argmin
+    return nanops.nanargmin(  # type: ignore[return-value]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 88, in _f
+    raise TypeError(
+TypeError: reduction operation 'argmin' not allowed for this dtype
+ERROR 2023-08-01 12:54:07,727 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: world_cities
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 110, in check_city
+    found_cities = list(found_cities.values())
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 208, in __iter__
+    for row in compiler.results_iter(
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1511, in results_iter
+    results = self.execute_sql(
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: world_cities
+ERROR 2023-08-01 12:54:07,838 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: world_cities
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 129, in check_city
+    cities = pd.DataFrame(
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\frame.py", line 737, in __init__
+    data = list(data)
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 208, in __iter__
+    for row in compiler.results_iter(
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1511, in results_iter
+    results = self.execute_sql(
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\IDE\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: world_cities
+ERROR 2023-08-01 13:07:38,121 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 137, in check_city
+    nearest_city = cities.loc[cities["dist"].idxmin()]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\series.py", line 2495, in idxmin
+    i = self.argmin(axis, skipna, *args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\base.py", line 717, in argmin
+    return nanops.nanargmin(  # type: ignore[return-value]
+  File "D:\IDE\Python39\lib\site-packages\pandas\core\nanops.py", line 88, in _f
+    raise TypeError(
+TypeError: reduction operation 'argmin' not allowed for this dtype
+ERROR 2023-08-01 13:20:33,185 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 111, in check_city
+    print(City.objects.get(id=1))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+test_app.models.City.DoesNotExist: City matching query does not exist.
+ERROR 2023-08-01 14:21:52,428 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 111, in check_city
+    print(City.objects.get(id=1))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+test_app.models.City.DoesNotExist: City matching query does not exist.
+ERROR 2023-08-01 14:22:10,274 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 111, in check_city
+    print(City.objects.get(id=1))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+test_app.models.City.DoesNotExist: City matching query does not exist.
+ERROR 2023-08-01 14:22:53,041 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 111, in check_city
+    print(City.objects.get(id=1))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+test_app.models.City.DoesNotExist: City matching query does not exist.
+ERROR 2023-08-01 14:23:13,832 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 111, in check_city
+    print(City.objects.get(id=1))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+test_app.models.City.DoesNotExist: City matching query does not exist.
+ERROR 2023-08-01 14:25:09,647 [django.request:log.py:                log_response:241]
+Internal Server Error: /api/check-city
+Traceback (most recent call last):
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\IDE\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Notebooks\Diplom\weather_web_app\backend_django\test_app\views.py", line 111, in check_city
+    print(City.objects.get(id=1))
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\IDE\Python39\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+test_app.models.City.DoesNotExist: City matching query does not exist.

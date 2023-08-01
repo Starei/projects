@@ -1,0 +1,29 @@
+[tool.black]
+line-length = 80
+include = '\.pyi?$'
+exclude = '''
+/(
+      .eggs
+    | .git
+    | .hg
+    | .mypy_cache
+    | .tox
+    | venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | .ipynb_checkpoints
+    | .vscode
+    | .ipynb
+  )/
+'''
+
+[tool.isort]
+profile = 'black'
+line_length = 79
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
